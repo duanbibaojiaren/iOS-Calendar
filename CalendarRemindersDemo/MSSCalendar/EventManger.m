@@ -86,6 +86,7 @@ static EventManger *manger = nil;
             [eventArray addObject:event];
         }
     }
+    events = [events sortedArrayUsingSelector:@selector(compareStartDateWithEvent:)];
     return eventArray;
 }
 
